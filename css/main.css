@@ -1,7 +1,13 @@
+@font-face {
+    font-family: "Caveat";
+    src: url("../fonts/Caveat/Caveat-Regular.ttf");
+}
+
 html, body {
     margin: 0;
     height: 100vh;
     overflow: auto;
+    font-family: Caveat;
 }
 
 nav {
@@ -12,11 +18,161 @@ nav {
 }
 
 .main-section {
-    background: url("../img/main-section.jpg");
+    background: linear-gradient(to right, #000000, #434343);
     background-position-x: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    /* filter: blur(3px); */
-    height: 80vh;
+    height: 100vh;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 100 !important;
+}
+
+.lamp {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.light {
+    position: absolute;
+    top: 13px;
+    background-color: white;
+    height: 1px;
+    width: 1px;
+    border-radius: 50%;
+    box-shadow: 0 0 45px 20px rgb(252, 249, 207),
+                0 0 15px 15px rgb(245, 241, 211);
+}
+ 
+.lamp-img {
+    position: absolute;
+}
+
+.particls {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.particl {
+    height: 1px;
+    width: 1px;
+    background: rgb(255, 254, 207);
+    position: absolute;
+    box-shadow: 0 0 10px 5px rgb(255, 254, 213);
+    border-radius: 50%;
+}
+
+.particl-1 {
+    animation: particl-1-movment 5s ease-in-out infinite;
+}
+
+.particl-2 {
+    animation: particl-2-movment 5s ease-in-out 0.6s infinite;
+}
+
+.particl-3 {
+    animation: particl-3-movment 5s ease-in-out 1.2s infinite;
+}
+
+.particl-4 {
+    animation: particl-4-movment 5s ease-in-out 1.8s infinite;
+}
+
+.particl-5 {
+    animation: particl-5-movment 5s ease-in-out 2.4s infinite;
+}
+
+@keyframes particl-1-movment {
+    0% {
+        top: 25px;
+        left: 25px;
+        opacity: 1;
+    }
+
+    50% {
+        top: 50px;
+    }
+    100% {
+        opacity: 0;
+        top: 0;
+        left: 250px;
+        box-shadow: 0 0 10px 5px white;
+    }
+}
+
+@keyframes particl-2-movment {
+    0% {
+        top: 25px;
+        left: 25px;
+        opacity: 1;
+    }
+
+    30% {
+        top: 0;
+    }
+    100% {
+        opacity: 0;
+        top: 50px;
+        left: 250px;
+        box-shadow: 0 0 10px 5px white;
+    }
+}
+
+@keyframes particl-3-movment {
+    0% {
+        top: 25px;
+        left: 25px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 0;
+        left: 250px;
+    }
+}
+
+@keyframes particl-4-movment {
+    0% {
+        top: 25px;
+        left: 0;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 50px;
+        left: 250px;
+    }
+}
+
+@keyframes particl-5-movment {
+    0% {
+        top: 25px;
+        left: 25px;
+        opacity: 1;
+    }
+    30% {
+        top: 0;
+    }
+    
+    60% {
+        top: 50px;
+    }
+    100% {
+        opacity: 0;
+        top: 25px;
+        left: 250px;
+    }
 }
